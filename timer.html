@@ -93,9 +93,11 @@
 
 <script>
   function beep() {
-  const sound = new Audio('bell.mp3');
+    const sound = new Audio('bell.mp3');
 
-  const promise = sound.play();
+    sound.play();
+    sound.pause();
+    sound.currentTime = 0;
    
 }
   var timer;
