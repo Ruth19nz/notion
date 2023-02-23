@@ -92,13 +92,13 @@
 
 
 <script>
+  <script src="howler.js"></script>
   function beep() {
-    const sound = new Audio('https://ruth19nz.github.io/notion/bell.mp3');
+    var sound = new Howl({
+    src: ['bell.mp3']
+});
 
-    sound.play();
-    sound.currentTime = 0;
-   
-}
+sound.play();}
   var timer;
 
 
