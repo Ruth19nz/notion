@@ -93,8 +93,10 @@
 
 <script>
   function beep() {
-    var snd = new Audio("https://ruth19nz.github.io/notion/bell.mp3"); 
-    snd.play();
+  const sound = new Audio('bell.mp3');
+
+  const promise = sound.play();
+   
 }
   var timer;
 
