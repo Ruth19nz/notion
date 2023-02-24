@@ -96,7 +96,7 @@
     const volumeUnits = {
       //Metric
       Mililiters: {
-        name: "Millilitres",
+        name: "Milliliters",
         Mililiters(i){return (i / 1).toFixed(5);},
         Liters(i){return (i / 1000).toFixed(5);},
 
@@ -109,7 +109,7 @@
         Gallon(i){return (i / 3785).toFixed(5);}
       },
       Liters: {
-        name: "Litres",
+        name: "Liters",
         Mililiters(i){return (this.Liters(i) * 1000).toFixed(5);},
         Liters(i){return (i / 1).toFixed(5);},
 
