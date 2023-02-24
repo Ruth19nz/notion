@@ -61,6 +61,7 @@
         <option value="volumeUnits">Volume</option>
         <option value="massUnits">Mass</option>
         <option value="temperatureUnits">Temperature</option>
+        <option value="energyUnits">Energy</option>
       </select>
       <br>
       <div style="width: 130px; display: inline-block;">
@@ -282,6 +283,18 @@
         Kelvan(i){return (i / 1).toFixed(5);}
       }
     }
+      const energyUnits = {
+        Calorie: {
+          name: "Calorie",
+          Calorie(i){return (i / 1).toFixed(5);},
+          Kilojoule(i){return (i * 4.184).toFixed(5);}
+        },
+        Kilojoule: {
+          name: "Kilojoule",
+          Calorie(i){return (i / 4.184).toFixed(5);},
+          Kilojoule(i){return (i /1).toFixed(5);}
+        }
+        }
 
     input.addEventListener('keyup', (e) => {
       output.value = `${eval(measurer.value)[inVolUnits.value][outVolUnits.value](input.value)}`
