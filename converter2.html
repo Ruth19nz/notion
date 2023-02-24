@@ -347,10 +347,10 @@
       var count = 0
       for(var val in eval(measurer.value)){
         if (count == defaul) {
-        str += "<option selected='selected' value=" + val + ">" + val + "</option>"
+        str += "<option selected='selected' value=" + val + ">" + [val].name + "</option>"
 
       } else {
-        str += "<option value=" + val + ">" + val + "</option>"
+        str += "<option value=" + val + ">" + eval(measurer.value)[val].name + "</option>"
       }
         count++
       }
